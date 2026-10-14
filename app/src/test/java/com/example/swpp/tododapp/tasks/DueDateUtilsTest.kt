@@ -99,8 +99,7 @@ class DueDateUtilsTest {
         val overdueLabel = dueDateLabel(october, november, isCompleted = false)
 
         // THEN - Count all elapsed calendar days, not only the period's day component
-        assertEquals("D-36", futureLabel)
-        assertEquals("D+36", overdueLabel)
+        assertEquals(listOf("D-36", "D+36"), listOf(futureLabel, overdueLabel))
     }
 
     @Test

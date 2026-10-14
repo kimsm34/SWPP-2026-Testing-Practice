@@ -24,7 +24,7 @@
     - Tip: Given `today = 2026-10-14`, `dueDate = 2026-10-12`, and `isCompleted = false` / When `dueDateLabel` is called / Then return `D+2`.
 - Error cases
   - None. `dueDate = null` is a valid input, and `today` is non-null by the function signature. `[Unit]`
-    - Tip: Given each input above / When `dueDateLabel` is called / Then return the specified label without throwing.
+    - Tip: Given `today = 2026-10-14`, `dueDate = null`, and `isCompleted = false` / When `dueDateLabel` is called / Then return `""` without throwing.
 - Edge cases
   - A due date equal to today returns `D-Day`; one day ahead returns `D-1`; one day behind returns `D+1`. `[Unit]`
     - Tip: Given `today = 2026-10-14` with due dates `2026-10-14`, `2026-10-15`, and `2026-10-13` / When `dueDateLabel` is called for each date / Then return `D-Day`, `D-1`, and `D+1`, respectively.

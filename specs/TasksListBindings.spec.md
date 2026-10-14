@@ -24,7 +24,7 @@
     - Tip: Given a `TextView` displaying `D-Day` with visibility `VISIBLE` and `task = null` / When `setDueDateLabel` is called / Then text is `""` and visibility is `GONE`.
 - Error cases
   - None; null task and absent due date are valid states. `[Integration]`
-    - Tip: Given a valid `TextView` and either a task or null / When `setDueDateLabel` is called / Then the call returns without throwing.
+    - Tip: Given a `TextView`, `Task(isCompleted = true, dueDate = null)`, and then `task = null` / When `setDueDateLabel` is called for both states / Then both calls return without throwing.
 - Edge cases
   - Switching the same recycled view from a completed task with no due date to an active task with no due date removes `CLEAR`. `[Integration]`
     - Tip: Given `Task(dueDate = null, isCompleted = true)` followed by `Task(dueDate = null, isCompleted = false)` on the same `TextView` / When `setDueDateLabel` is called for both / Then the second state has empty text and `GONE` visibility.

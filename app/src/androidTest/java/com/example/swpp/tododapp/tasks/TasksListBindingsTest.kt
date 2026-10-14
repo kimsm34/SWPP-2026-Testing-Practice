@@ -70,8 +70,7 @@ class TasksListBindingsTest {
             setDueDateLabel(textView, task)
 
             // THEN - Remove the stale label and hide the view
-            assertEquals("", textView.text.toString())
-            assertEquals(View.GONE, textView.visibility)
+            assertEquals("" to View.GONE, textView.text.toString() to textView.visibility)
         }
     }
 
@@ -88,8 +87,7 @@ class TasksListBindingsTest {
             setDueDateLabel(textView, null)
 
             // THEN - Remove the stale label and hide the view
-            assertEquals("", textView.text.toString())
-            assertEquals(View.GONE, textView.visibility)
+            assertEquals("" to View.GONE, textView.text.toString() to textView.visibility)
         }
     }
 
@@ -104,8 +102,7 @@ class TasksListBindingsTest {
             setDueDateLabel(textView, null)
 
             // THEN - Both calls complete; assertions below also check the final view state
-            assertEquals("", textView.text.toString())
-            assertEquals(View.GONE, textView.visibility)
+            assertEquals("" to View.GONE, textView.text.toString() to textView.visibility)
         }
     }
 
@@ -120,8 +117,7 @@ class TasksListBindingsTest {
             setDueDateLabel(textView, Task(isCompleted = false, dueDate = null))
 
             // THEN - The active task has no label and the old CLEAR is removed
-            assertEquals("", textView.text.toString())
-            assertEquals(View.GONE, textView.visibility)
+            assertEquals("" to View.GONE, textView.text.toString() to textView.visibility)
         }
     }
 
